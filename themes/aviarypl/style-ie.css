@@ -1,0 +1,28 @@
+#nav li a { 	
+    color: #fff !important;
+    filter: Shadow(Color=#2d3b56, Direction=135, Strength=2);
+    display: block;
+}
+
+#nav li {
+    margin-top: 2px;
+}
+
+#nav li a:hover {
+    text-decoration: underline;
+}
+
+#nav li.current_root a {
+    color: #000 !important;
+    filter: Shadow(Color=#666666, Direction=135, Strength=2);
+}
+
+ul.nav2nd li a, ul.nav2nd li.current_page_item li a {
+    zoom: 1; /* hasLayout: true */
+}
+
+.col2of2 {
+	background-: url(images/c-grad.png) no-repeat 5px 0 !important;
+	z-index: 0;
+	zoom: 1; /* hasLayout: true */
+}

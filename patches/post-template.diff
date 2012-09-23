@@ -1,0 +1,17 @@
+--- /home/aviarypl/wlam/vanilla/wordpress-3.4.2//wp-includes/post-template.php	2012-06-25 20:21:37.000000000 -0700
++++ /home/aviarypl/www/www/wordpress/wp-includes/post-template.php	2012-09-22 16:51:36.943502542 -0700
+@@ -1045,7 +1045,13 @@
+ 
+ 		$css_class = implode( ' ', apply_filters( 'page_css_class', $css_class, $page, $depth, $args, $current_page ) );
+ 
+-		$output .= $indent . '<li class="' . $css_class . '"><a href="' . get_permalink($page->ID) . '">' . $link_before . apply_filters( 'the_title', $page->post_title, $page->ID ) . $link_after . '</a>';
++		/*
++                 * FIXME: rozwala nam cienie i menu
++                 *        http://core.trac.wordpress.org/ticket/16783
++                 * 
++                $output .= $indent . '<li class="' . $css_class . '"><a href="' . get_permalink($page->ID) . '">' . $link_before . apply_filters( 'the_title', $page->post_title, $page->ID ) . $link_after . '</a>';
++                 */
++                $output .= $indent . '<li class="' . $css_class . '"><a href="' . get_permalink($page->ID) . '" title="' . esc_attr( wp_strip_all_tags( apply_filters( 'the_title', $page->post_title, $page->ID ) ) ) . '">' . $link_before . apply_filters( 'the_title', $page->post_title, $page->ID ) . $link_after . '</a>';
+ 
+ 		if ( !empty($show_date) ) {
+ 			if ( 'modified' == $show_date )

@@ -1,0 +1,39 @@
+
+#nav li > a { 	color: #595959;
+	display: block;
+	line-height: 1em;
+	color: #5c6b88; /* shadow color */
+	background-color: transparent;
+	white-space: nowrap; /* wrapping breaks the effect */
+}
+
+#nav li > a:before,
+#nav li > a:after {
+	content: attr(title); /* generated text */
+	display: block;
+}
+
+#nav li > a:before {
+	margin-bottom: -1.05em;
+	margin-left: 0.1ex;
+	color: #2d3b56; /* shadow color */
+	background-color: transparent;
+}
+
+#nav li > a:after {
+	margin-top: -1.05em;
+	margin-left: -0.1ex;
+	color: #fff; /* text color */
+	background-color: transparent;
+}
+
+
+#nav li > a:hover:after {
+	text-decoration: underline;
+	color: #fff; /* text color */
+}
+
+#nav li > a:hover {
+	color: #5c6b88; /* shadow color */
+	text-decoration: underline;
+}
