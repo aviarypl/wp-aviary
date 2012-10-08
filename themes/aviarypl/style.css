@@ -163,7 +163,7 @@ body.opensuse #brandR, body.sle #brandR {
 }
 
 #brandC {
-    padding-top: 20px;
+  padding-top: 32px;
 }
 
 #homelnk {
@@ -171,8 +171,8 @@ body.opensuse #brandR, body.sle #brandR {
 	display: block;
 	overflow: hidden;
 	color: #777;
-	width: 211px;
-        height: 44px;
+  height: 59px;
+  width: 184px;
 	font-size: 20px;
 	text-decoration: none;
 	font-weight: bold;
@@ -181,10 +181,10 @@ body.opensuse #brandR, body.sle #brandR {
 }
 
 #homelnk span {
-	background-image: url(images/apl-solid.png);
+  background-image: url(http://static.aviary.pl/wp/logo.aviarypl.png);
 	display: block;
-	height: 44px;
-	width: 211px;
+  height: 59px;
+  width: 184px;
 	position: absolute;
 	cursor: pointer;
 }
