@@ -25,7 +25,7 @@ require_once ("aviarypl-functions.php");
 	<meta name="description" content="Strona zespołu Aviary.pl - polskiej grupy lokalizatorów programów Mozilla Foundation." />	
 	<!--[if lt IE 8]><link rel="stylesheet" href='<?php bloginfo('stylesheet_directory'); ?>/style-ie.css' type='text/css' /><![endif]-->
 	<!--[if gte IE 7]><link rel="stylesheet" href='<?php bloginfo('stylesheet_directory'); ?>/style-ie7.css' type='text/css' /><![endif]-->
-	<link rel="Shortcut Icon" type="image/png" href="<?php echo bloginfo('template_directory');?>/images/favicon.png" />
+  <link rel=icon href=http://static.aviary.pl/a.64t.png />
 	<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 	<?php wp_head(); ?>
 </head>
