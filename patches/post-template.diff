@@ -1,17 +1,25 @@
---- /home/aviarypl/wlam/vanilla/wordpress-3.4.2//wp-includes/post-template.php	2012-06-25 20:21:37.000000000 -0700
-+++ /home/aviarypl/www/www/wordpress/wp-includes/post-template.php	2012-09-22 16:51:36.943502542 -0700
-@@ -1045,7 +1045,13 @@
+--- wp-includes/post-template.php	2012-11-17 07:11:29.000000000 -0800
++++ wp-includes/post-template-new.php	2012-12-17 07:04:04.604045087 -0800
+@@ -1043,17 +1043,22 @@
+ 			elseif ( $_current_page && $page->ID == $_current_page->post_parent )
+ 				$css_class[] = 'current_page_parent';
+ 		} elseif ( $page->ID == get_option('page_for_posts') ) {
+ 			$css_class[] = 'current_page_parent';
+ 		}
  
  		$css_class = implode( ' ', apply_filters( 'page_css_class', $css_class, $page, $depth, $args, $current_page ) );
  
--		$output .= $indent . '<li class="' . $css_class . '"><a href="' . get_permalink($page->ID) . '">' . $link_before . apply_filters( 'the_title', $page->post_title, $page->ID ) . $link_after . '</a>';
-+		/*
-+                 * FIXME: rozwala nam cienie i menu
++                /* FIXME: rozwala nam cienie i menu
 +                 *        http://core.trac.wordpress.org/ticket/16783
-+                 * 
-+                $output .= $indent . '<li class="' . $css_class . '"><a href="' . get_permalink($page->ID) . '">' . $link_before . apply_filters( 'the_title', $page->post_title, $page->ID ) . $link_after . '</a>';
++                 *
+ 		$output .= $indent . '<li class="' . $css_class . '"><a href="' . get_permalink($page->ID) . '">' . $link_before . apply_filters( 'the_title', $page->post_title, $page->ID ) . $link_after . '</a>';
 +                 */
 +                $output .= $indent . '<li class="' . $css_class . '"><a href="' . get_permalink($page->ID) . '" title="' . esc_attr( wp_strip_all_tags( apply_filters( 'the_title', $page->post_title, $page->ID ) ) ) . '">' . $link_before . apply_filters( 'the_title', $page->post_title, $page->ID ) . $link_after . '</a>';
  
  		if ( !empty($show_date) ) {
  			if ( 'modified' == $show_date )
+ 				$time = $page->post_modified;
+ 			else
+ 				$time = $page->post_date;
+ 
+ 			$output .= " " . mysql2date($date_format, $time);
