@@ -299,46 +299,20 @@ body.opensuse #brandR, body.sle #brandR {
 /* text shadows in menu */
 
 div > #nav {
-	padding-top: 3px;
+  padding-top: 3px
 }
 
-#nav li > a { 	color: #595959;
-	display: block;
-	line-height: 1em;
-	color: #5c6b88; /* shadow color */
-	background-color: transparent;
-	white-space: nowrap; /* wrapping breaks the effect */
-}
-
-#nav li > a:before,
-#nav li > a:after {
-	content: attr(title); /* generated text */
-	display: block;
-}
-
-#nav li > a:before {
-	margin-bottom: -1.05em;
-	margin-left: 0.1ex;
-	color: #2d3b56; /* shadow color */
-	background-color: transparent;
-}
-
-#nav li > a:after {
-	margin-top: -1.05em;
-	margin-left: -0.1ex;
-	color: #fff; /* text color */
-	background-color: transparent;
-}
-
-
-#nav li > a:hover:after {
-	text-decoration: underline;
-	color: #fff; /* text color */
+#nav li > a {
+  color: #fff;
+  display: block;
+  line-height: 1em;
+  text-shadow: #5c6b88 0.05em 0.075ex,
+               #2d3b56 0.11em 0.15ex
 }
 
 #nav li > a:hover {
-	color: #5c6b88; /* shadow color */
-	text-decoration: underline;
+  color: #fff;
+  text-decoration: underline
 }
 
 /* Left column */
@@ -675,19 +649,10 @@ h2 a {
 
 #nav li.current_page_item a,
 #nav li.current_page_ancestor a {
-    background: transparent url(images/tabtl.png) top left no-repeat !important;
-    border-bottom: 3px solid #fff !important;
-    color: #ccc;
-}
-
-#nav li.current_page_item a:before,
-#nav li.current_page_ancestor a:before {
-	color: #ccc; /* shadow color */
-}
-
-#nav li.current_page_item a:after,
-#nav li.current_page_ancestor a:after {
-	color: #222; /* text color */
+  background: transparent url(images/tabtl.png) top left no-repeat !important;
+  border-bottom: 3px solid #fff !important;
+  color: #222;
+  text-shadow: #ccc 0.1em 0.1ex
 }
 
 .nvg {
