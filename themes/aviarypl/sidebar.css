@@ -192,3 +192,17 @@
     background-position: -16px 0;
 }
 
+/* widget_rss */
+#content .widget_rss { margin-top: 40px; background: url("images/c-grad.png") no-repeat scroll 0% 0% transparent }
+#content .widget_rss > h2 { padding-top: 10px }
+#content .widget_rss > h2 > a { color: black !important; font-size: 1.1em; text-decoration: none }
+#content .widget_rss > h2 > a:first-child { display: none }
+#content .widget_rss > ul { background: none; list-style: disc outside; margin: 0px 0px 0px 10px }
+#content .widget_rss > ul:after,
+#content .widget_rss > ul:before { content: none }
+#content .widget_rss > ul > h2 { margin: 10px 0 }
+#content .widget_rss > ul > li { display: list-item; margin-left: 10px !important }
+#content .widget_rss > ul > li:first-child { list-style: none; font-size: 1em; padding: 10px 0 20px 0; margin-left: 0 !important }
+#content .widget_rss > ul > li:first-child > a { font-size: 1.2em; text-decoration: underline }
+#content .widget_rss > ul > li > a { background: none; border: none; font-size: 0.9em; font-weight: bold !important; padding: 0 }
+#content .widget_rss > ul > li > a:hover { text-decoration: underline }
