@@ -4,21 +4,17 @@
  * @subpackage Aviary.pl_Theme
  */
 
-require_once ("aviarypl-functions.php");
-?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ require_once ("aviarypl-functions.php");
+
+?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
-
-<head profile="http://gmpg.org/xfn/11">
-	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
-
-	<title><?php wp_title('&laquo;', true, 'right'); ?> <?php bloginfo('name'); ?></title>
-
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/sidebar.css" type="text/css" media="screen" />
-	<link rel="alternate" type="application/atom+xml" title="<?php bloginfo('name'); ?> Atom Feed" href="<?php bloginfo('atom_url'); ?>" />
-	<!--[if lt IE 8]><link rel="stylesheet" href='<?php bloginfo('stylesheet_directory'); ?>/style-ie.css' type='text/css' /><![endif]-->
-	<!--[if gte IE 7]><link rel="stylesheet" href='<?php bloginfo('stylesheet_directory'); ?>/style-ie7.css' type='text/css' /><![endif]-->
+ <head profile="http://gmpg.org/xfn/11">
+  <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
+  <title><?php wp_title('&laquo;', true, 'right'); ?> <?php bloginfo('name'); ?></title>
+  <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
+  <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/sidebar.css" type="text/css" media="screen" />
+  <!--[if lt IE 8]><link rel="stylesheet" href='<?php bloginfo('stylesheet_directory'); ?>/style-ie.css' type='text/css' /><![endif]-->
+  <!--[if gte IE 7]><link rel="stylesheet" href='<?php bloginfo('stylesheet_directory'); ?>/style-ie7.css' type='text/css' /><![endif]-->
   <link rel="alternate" type="application/atom+xml" title="<?php bloginfo('name'); ?> Atom Feed" href="<?php bloginfo('atom_url'); ?>" />
   <link rel=icon href=http://static.aviary.pl/a.64t.png />
   <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
