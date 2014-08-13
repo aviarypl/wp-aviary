@@ -4,6 +4,16 @@
  * @subpackage Aviary.pl_Theme
  */
 
+remove_action("template_redirect", "wp_shortlink_header");
+
+remove_action("wp_head", "adjacent_posts_rel_link_wp_head");
+remove_action("wp_head", "feed_links");
+remove_action("wp_head", "feed_links_extra");
+remove_action("wp_head", "rel_canonical");
+remove_action("wp_head", "rsd_link");
+remove_action("wp_head", "wlwmanifest_link");
+remove_action("wp_head", "wp_shortlink_wp_head");
+
 register_sidebar(array(
   'name' => 'leftbar front page',
   'before_widget' => '<li class="widget %2$s">',

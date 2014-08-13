@@ -22,12 +22,7 @@ require_once ("aviarypl-functions.php");
   <link rel="alternate" type="application/atom+xml" title="<?php bloginfo('name'); ?> Atom Feed" href="<?php bloginfo('atom_url'); ?>" />
   <link rel=icon href=http://static.aviary.pl/a.64t.png />
   <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-  <?php remove_action("wp_head", "feed_links_extra");
-        remove_action("wp_head", "rel_canonical");
-        remove_action("wp_head", "rsd_link");
-        remove_action("wp_head", "wlwmanifest_link");
-        remove_action("wp_head", "wp_shortlink_wp_head");
-        wp_head(); ?>
+  <?php wp_head(); ?>
   <meta name="description" content="Strona zespołu Aviary.pl - polskiej grupy lokalizatorów programów Mozilla Foundation." />
  </head>
  <body class="<?php echo aviarypl_get_root_name_by_post($post) . ' ' . basename($_SERVER["REQUEST_URI"]);?>">
