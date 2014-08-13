@@ -16,20 +16,21 @@ require_once ("aviarypl-functions.php");
 
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/sidebar.css" type="text/css" media="screen" />
-	<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
 	<link rel="alternate" type="application/atom+xml" title="<?php bloginfo('name'); ?> Atom Feed" href="<?php bloginfo('atom_url'); ?>" />
-	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-
-	<meta name="generator" content="WordPress <?php bloginfo('version'); ?>" /> <!-- leave this for stats -->
-	<meta name="keywords" content="Aviary, AviaryPL, Aviary.pl, Firefox, Thunderbird, Nvu, Mozilla, Mozilla Firefox, Netscape, gecko, przeglądarka, www, polski, po polsku, tłumaczenie, lokalizacja, polska, polska wersja, polskie, w3c, html, javascript, ecmascript, css, download, Mozilla po polsku, Mozilla polska, Firefox po polsku, polski firefox" />
-	<meta name="description" content="Strona zespołu Aviary.pl - polskiej grupy lokalizatorów programów Mozilla Foundation." />	
 	<!--[if lt IE 8]><link rel="stylesheet" href='<?php bloginfo('stylesheet_directory'); ?>/style-ie.css' type='text/css' /><![endif]-->
 	<!--[if gte IE 7]><link rel="stylesheet" href='<?php bloginfo('stylesheet_directory'); ?>/style-ie7.css' type='text/css' /><![endif]-->
+  <link rel="alternate" type="application/atom+xml" title="<?php bloginfo('name'); ?> Atom Feed" href="<?php bloginfo('atom_url'); ?>" />
   <link rel=icon href=http://static.aviary.pl/a.64t.png />
-	<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
-	<?php wp_head(); ?>
-</head>
-<body class="<?php echo aviarypl_get_root_name_by_post($post) . ' ' . basename($_SERVER["REQUEST_URI"]);?>">
+  <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+  <?php remove_action("wp_head", "feed_links_extra");
+        remove_action("wp_head", "rel_canonical");
+        remove_action("wp_head", "rsd_link");
+        remove_action("wp_head", "wlwmanifest_link");
+        remove_action("wp_head", "wp_shortlink_wp_head");
+        wp_head(); ?>
+  <meta name="description" content="Strona zespołu Aviary.pl - polskiej grupy lokalizatorów programów Mozilla Foundation." />
+ </head>
+ <body class="<?php echo aviarypl_get_root_name_by_post($post) . ' ' . basename($_SERVER["REQUEST_URI"]);?>">
 	
 	<div class="ac">
 		<p>Przejdź do:</p>
